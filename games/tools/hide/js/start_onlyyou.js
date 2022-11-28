@@ -1,8 +1,20 @@
-
+        $.getUrlParam = function(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r !== null) return unescape(r[2]); return null;
+        };
 
         function init_onlyyou(){
-            start_content['chase_title'] = window.location.search.substr(1).concat(start_content['chase_title']) // 新添加、获取目标姓名
-            start_content['chase_text'] = window.location.search.substr(1).concat(start_content['chase_text']) // 新添加、获取目标姓名
+            var query = $.getUrlParam('name');
+            if(!!query) {
+                try {
+                    query = Base64.decode(query);
+                } catch(e) {
+                    console.log(e);
+                }
+            }
+            start_content['chase_title'] = query.concat(start_content['chase_title']) // 新添加、获取目标姓名
+            start_content['chase_text'] = query.concat(start_content['chase_text']) // 新添加、获取目标姓名
             // 初始化两个div的高度
             $("#div_onlyyou").css({"height":$(window).height()+260+"px"});
             $("#div_oy_inner").css({"height":$(window).height()+260+"px"});
