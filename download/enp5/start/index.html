@@ -3,7 +3,17 @@
 既然来了就做一个游戏吧
 <br>
 <br>
-<script src="./js/script.js"></script>
+<script>
+	function guess2()
+	{
+		var died=document.getElementById("guess");
+		if (100000 < died)
+		{
+			document.getElementById("pl").innerHTML="终于过了新手教程，你真tm慢<br>第一关密钥："
+		}
+	}
+</script>
 后台有一个不变的数字，只要你输入的数字比后台的数字大，你就赢了
-<input maxlength="3" id="guess"><br>
-<button id="submit-died">提交</button>
+<input maxlength="5" id="guess"><br>
+<button onclick="guess2()">提交</button>
+<br><p id="pl"></p>
