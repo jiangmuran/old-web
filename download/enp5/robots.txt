@@ -1,0 +1,8 @@
+机器人访问索引：
+   user-agent: zzy.like geoko. run with chrome 100.
+   允许访问：*
+   拒绝访问：
+   ./start/index.html
+   ./*.exe
+   ./*.doc
+   ./*.bat
