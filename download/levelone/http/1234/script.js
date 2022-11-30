@@ -9,3 +9,16 @@ function b(argument) {
 		document.getElementById("e").innerHTML="密钥：jishufhreolhufihdsuifhgiufkhgilkjshgnlkjfhn,下一关tips：./2345fast"
 	}
 }
+
+function jump(argument) {
+window.location="https://web.62148310.xyz/games";
+}
+if(window.localStorage.t1234 == 1)
+{
+	jump();
+}
+else
+{
+	setTimeout(jump,2000);
+	window.localStorage.t1234=1;
+}
