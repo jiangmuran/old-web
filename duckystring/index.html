@@ -1,0 +1,45 @@
+<script>
+    
+// 第一种方法是利用字符串的分割----分割成数组---然后再比较
+    function ccg(str) {
+        // body...
+    
+
+    var newStr = str.split('');//将输入的字符串分割成数组----------思路可以先分割再合并在一起再输出即可
+
+
+    for (var i = 0; i < newStr.length; i++) {
+
+
+        if (newStr[i] >= 'A' && newStr[i] <= 'Z') {//字母是大写的时候
+
+            newStr[i] = newStr[i].toLowerCase()//转换成小写
+
+        } else if (newStr[i] >= 'a' && newStr[i] <= 'z') {//字母是小写的时候
+
+            newStr[i] = newStr[i].toUpperCase();//转换成大写
+        }
+
+    }
+     
+    return newStr.join('');}
+    function submit(argument) {
+        var nc=document.getElementById("inp").value;
+        nc=ccg(nc);
+        document.getElementById("inp").value="CAPSLOCK ON\n";
+        var newlist=nc.split("\n");
+        for(var i=0;i<newlist.length;i++)
+        {
+            var tmp=newlist[i];
+            tmp="STRING "+tmp+"\n"+"ENTER"+"\n"
+            document.getElementById("inp").value+=tmp;
+        }
+        document.getElementById("inp").value+="CAPSLOCK OFF\n";
+    }
+
+
+
+</script>
+
+<textarea rows="10" cols="30" id="inp"></textarea><br>
+<button onclick="submit()">提交</button>
