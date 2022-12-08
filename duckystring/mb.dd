@@ -18,3 +18,10 @@ REM https://web.62148310.xyz/duckystring/index.html
 
 
 REM STOP
+
+CTRL A
+CTRL C
+DELAY 10
+LEFT
+DELAY 2000
+CTRL S
