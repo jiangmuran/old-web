@@ -1,0 +1,9 @@
+<script src="./js/base64.min.js"></script>
+<script src="./js/decode.js"></script>
+<p>需要解密的内容：</p>
+<textarea rows="10" cols="30" id="text" ></textarea>
+<p>解密密钥，如果没有可以使用下面的公用密钥：</p>
+<textarea rows="10" cols="30" id="passwd" ></textarea><button onclick="submit()">提交</button><br>
+<button onclick="appends('1')">英文字母+数字+符号1</button><button onclick="appends('2')">英文字母+数字+符号2</button><button onclick="appends('3')">英文字母+数字+符号3</button><br>
+<button onclick="appends('4')">中文常用字+其他1</button><button onclick="appends('5')">中文常用字+其他2</button><button onclick="appends('6')">中文常用字+其他3</button><br>
+<p id="log">日志:<br></p>

@@ -72,11 +72,11 @@ function submit(argument) {
 	document.getElementById("log").innerHTML+="正在处理，稍安勿躁<br>"
 	for (var i=0;i<passwdstr.length;i++)
 	{
-		list1.push(passwdstr[i]);
-		i++;
 		list2.push(passwdstr[i]);
+		i++;
+		list1.push(passwdstr[i]);
 	}
-	var done="",texta=str_to_list(document.getElementById("text").value);
+	var done="",texta=str_to_list(Base64.decode(document.getElementById("text").value));
 	for (var i=0;i<texta.length;i++)
 	{
 		var check=list1.indexOf(texta[i]);
@@ -91,6 +91,6 @@ function submit(argument) {
 		}
 	}
 	console.log(done);
-	document.getElementById("text").value=Base64.encode(done);
+	document.getElementById("text").value=done;
 	document.getElementById("log").innerHTML+="处理完成！<br>";
 }
