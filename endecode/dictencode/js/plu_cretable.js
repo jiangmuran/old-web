@@ -56,7 +56,7 @@ function submit(argument) {
 		document.getElementById("passwd").value+="<-->";
 		document.getElementById("passwd").value+=list2[i];
 		document.getElementById("passwd").value+="   ";
-		if (i%document.getElementById("entercount").value == 0 && i != 0)
+		if ((i%document.getElementById("entercount").value == 0 && i != 0) or (i == 0 && i%document.getElementById("entercount").value == document.getElementById("entercount").value-1))
 		{
 			document.getElementById("passwd").value+="\n";
 		}
