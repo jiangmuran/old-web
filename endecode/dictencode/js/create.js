@@ -77,7 +77,7 @@ function appends(types) {
 	}
 	if (types == "teshu")
 	{
-		document.getElementById("have").value+="~`!@#$%^&*()_+-={}|:\"<>?[]\\;',./";
+		document.getElementById("have").value+="~`!@#$%^&*()_+-= {}|:\"<>?[]\\;',./";
 	}
 	if (types == "5000chinese")
 	{
